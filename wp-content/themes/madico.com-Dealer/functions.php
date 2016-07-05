@@ -155,67 +155,6 @@ function madico_pagination()
 }
 
 /**
- * Contact sidebar
- */
-function madico_contact_sidebar() {
-
-	// Show on all pages with the slug "contact" (currently there are 7)
-	global $section, $post, $language;
-	if ( ( is_page('contact') ) && ($language != 'chinese') ) {
-		$title = ( $section === 'specialty-film' ) ? 'Madico Specialty Films' : 'Get in Touch';
-
-		echo '<ul><li><h2>' . $title . '</h2><div class="textwidget">';
-
-		if ( $GLOBALS['section'] == 'window-film' ) {
-            echo '<h3>Window Films Headquarters</h3>';
-            echo '<address>';
-            echo '<strong>Madico Window Films</strong><br />';
-            echo '2630 Fairfield Ave. South<br />';
-            echo 'St. Petersburg, FL<br />';
-            echo '33712<br>';
-            echo '(727)-327-2544';
-            echo '</address>';
-            echo '<hr />';
-            echo '<h3>Corporate Headquarters</h3>';
-            echo '<address>';
-            echo '<strong>Madico, Inc.</strong><br />';
-            echo '64 Industrial Parkway<br />';
-            echo 'Woburn, Mass.<br />';
-            echo '01801';
-            echo '</address><br>';
-        } elseif ( $section === 'specialty-film' ) {
-            echo '<h3>Madico, Inc.</h3>';
-            echo '<address style="margin-bottom: 10px;">';
-            echo '64 Industrial Pkwy.<br />';
-            echo 'Woburn, MA 01801<br /><br />';
-            echo 'Toll-Free: +1-800-456-4331<br />';
-            echo 'Local: +1-781-935-7850<br />';
-            echo 'Fax: +1-781-935-6841<br />';
-            echo 'Email: <a href="mailto:infosf@madico.com">infosf@madico.com</a>';
-            echo '</address>';
-        } else {
-            echo '<h3>Corporate Headquarters</h3>';
-            echo '<address>';
-            echo '<strong>Madico, Inc.</strong><br />';
-            echo '64 Industrial Parkway<br />';
-            echo 'Woburn, Mass.<br />';
-            echo '01801';
-            echo '</address>';
-            echo '<hr />';
-            echo '<h3>Window Films Headquarters</h3>';
-            echo '<address>';
-            echo '<strong>Madico Window Films</strong><br />';
-            echo '2630 Fairfield Ave. South<br />';
-            echo 'St. Petersburg, FL<br />';
-            echo '33712';
-            echo '</address><br>';
-        }
-		echo '</div></li></ul>';
-	}
-}
-add_action( 'get_sidebar', 'madico_contact_sidebar' );
-
-/**
  *	Configure default oEmbed video sizes
  */
 function base_oembed_defaults($embed_size) {
@@ -510,7 +449,7 @@ function base_body_class( $print = true ) {
 	$c = array('wordpress');
 
 	// Applies the time- and date-based classes (below) to BODY element
-	thematic_date_classes( time(), $c );
+	//thematic_date_classes( time(), $c );
 
 	// Generic semantic classes for what type of content is displayed
 	is_front_page()  ? $c[] = 'home'       : null; // For the front page, if set
@@ -798,13 +737,13 @@ function base_body_class( $print = true ) {
 }
 
 // Generates time- and date-based classes for BODY, post DIVs, and comment LIs; relative to GMT (UTC)
-function thematic_date_classes( $t, &$c, $p = '' ) {
+/*function thematic_date_classes( $t, &$c, $p = '' ) {
 	$t = $t + ( get_option('gmt_offset') * 3600 );
 	$c[] = $p . 'y' . gmdate( 'Y', $t ); // Year
 	$c[] = $p . 'm' . gmdate( 'm', $t ); // Month
 	$c[] = $p . 'd' . gmdate( 'd', $t ); // Day
 	$c[] = $p . 'h' . gmdate( 'H', $t ); // Hour
-}
+}*/
 // Multiple Sidebars
 if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(

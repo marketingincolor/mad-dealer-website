@@ -3,6 +3,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" <?php language_attributes(); ?>>
 <head profile="http://gmpg.org/xfn/11">
 	<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="<?php bloginfo('template_url'); ?>/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
 	<title><?php wp_title(''); ?></title>
 	<link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
 	<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
@@ -19,42 +22,40 @@
 	<div class="background-graphic"></div>
 <div class="container"><!--// start #container -->
 
-	<div class="branding">
-		<a href="<?php print get_option("home"); ?>"><?php print get_bloginfo("name"); ?></a>
-	</div>
-
-	<div id="lang_flag_sel"><?php language_selector_flags(); ?></div>
-
-	<?php if ( $language != 'chinese' ): ?>
-		<div class="search">
+	<div class="row-fluid">
+		<div class="branding span4">
+			<a href="<?php print get_option("home"); ?>"><?php print get_bloginfo("description"); ?></a>
+		</div>
+		<div class="OMITutility span4 hidden-phone">
+			<div id="lang_flag_sel"><?php language_selector_flags(); ?></div>
+		</div>
+		<div class="search span4 hidden-phone">
 			<?php require_once(TEMPLATEPATH . "/searchform.php"); ?>
 		</div>
-	<?php else: ?>
-		<div class="tagline">
-			<span>中國</span>
+
+	</div>
+
+	<div class="row-fluid">
+		<div class="span12">
+			<div class="menu" id="dave">
+				<ul>
+				<?php
+					wp_nav_menu( array(
+						'menu' => 'primary',
+						'container' => '',
+						'container_class' => '',
+						'container_id' => '',
+						'menu_class' => '',
+						'menu_id' => '',
+						'items_wrap' => '%3$s',
+						'depth' => 3,
+						'walker' => new Madico_Custom_Walker_Menu()
+					) );
+				?>
+				</ul>
+			</div>
 		</div>
-	<?php endif; ?>
-
-	<div class="utility">
-
 	</div>
 
-	<div class="menu" id="dave">
-		<ul>
-			<?php
-                wp_nav_menu( array(
-                    'menu' => 'primary',
-                    'container' => '',
-                    'container_class' => '',
-                    'container_id' => '',
-                    'menu_class' => '',
-                    'menu_id' => '',
-                    'items_wrap' => '%3$s',
-					'depth' => 3,
-                    'walker' => new Madico_Custom_Walker_Menu()
-                ) );
-			?>
-		</ul>
-	</div>
 
-<div class="page"><!--// start #page -->
+<div class="page row-fluid"><!--// start #page -->

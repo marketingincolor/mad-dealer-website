@@ -6,7 +6,7 @@ html, body { height: 100%; }
 .inner { margin: 0px auto; position: relative; width: 960px; }
 #header { margin-bottom: 30px; }
 #content { margin-bottom: 30px; }
-#footer { height: 100px; }
+#footer { height: auto; }
 #branding { padding: 1.6em 0px; }
 #branding #searchbox { display: inline; float: left; }
 #branding #signup li { display: inline; margin: 0px 5px 0px 0px; }
@@ -925,57 +925,58 @@ a:hover, a:active {
 }
 
 #search-text, #s {
-     background: rgba(0, 0, 0, 0) url("../images/search-form.png") no-repeat scroll 0px 0px;
-     border: medium none;
-     border-radius: 10px;
-     color: #999999;
-     display: block;
-     float: left;
-     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
-     font-size: 12px;
-     height: 15px;
-     margin: 0px;
-     padding: 6px 10px 4px 30px;
-     width: 260px;
+    background: rgba(0, 0, 0, 0) url("../images/search-form.png") no-repeat scroll 0px 0px;
+    border: medium none;
+    border-radius: 10px;
+    color: #999999;
+    display: block;
+    float: right;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    height: 15px;
+    margin: 0px;
+    padding: 6px 10px 4px 30px;
+    /*width: auto;*/
 }
 
 #searchsubmit {
-     display: none;
+    display: none;
 }
 
 .error-404 h4 {
-     font-size: 13px;
-     margin: 1.2em 0px 0.8em;
+    font-size: 13px;
+    margin: 1.2em 0px 0.8em;
 }
 
 .sidebar li form, ul.navigation li, blockquote p {
-     margin: 0px;
+    margin: 0px;
 }
 
 a:hover {
-     text-decoration: underline;
+    text-decoration: underline;
 }
 
 #content {
-     background-color: #ffffff;
-     /*background: #eaf1f3 url("../images/content.png") repeat-x scroll 0px bottom;*/
-     margin: 0px;
-     overflow: hidden;
-     width: 100%;
+    background-color: #ffffff;
+    /*background: #eaf1f3 url("../images/content.png") repeat-x scroll 0px bottom;*/
+    margin: 0px;
+    overflow: hidden;
+    width: 100%;
 }
 
-#content div.background {
-     padding: 111px 0px 0px;
+#content div.background, #content div.sections  {
+     padding: 33px 0px 0px;
      position: relative;
 }
 
-#content div.background div.container {
-     border-radius: 3px;
-     margin: 0px auto;
-     padding: 0px 0px 1px;
-     position: relative;
-     width: 940px;
-     z-index: 3;
+#content div.background div.container, #content div.sections div.container {
+    border-radius: 3px;
+    /*margin: 0px auto;*/
+    /*padding: 0px 0px 1px;*/
+    padding: 0px 20px;
+    position: relative;
+    /*width: 940px;*/
+    z-index: 3;
 }
 
 #content div.background .background-graphic {
@@ -1012,22 +1013,26 @@ a:hover {
      z-index: 1;
 }
 
-.branding {
-     height: 42px;
-     left: 0px;
-     overflow: hidden;
-     position: absolute;
-     top: -77px;
-     width: 186px;
+.REMOVEbranding {
+    height: 42px;
+    left: 0px;
+    overflow: hidden;
+    position: absolute;
+    top: -77px;
+    width: 186px;
 }
 
+.branding a:before {
+    content: ' ';
+    background: rgba(0, 0, 0, 0) url("../images/madico-logo-trans.png") no-repeat scroll 0px 0px;
+    display: inline-block;
+    height: 44px;
+    overflow: hidden;
+    /*text-indent: -999999px;*/
+    width: 190px;
+}
 .branding a {
-     background: rgba(0, 0, 0, 0) url("../images/madico-logo-trans.png") no-repeat scroll 0px 0px;
-     display: block;
-     height: 42px;
-     overflow: hidden;
-     text-indent: -999999px;
-     width: 186px;
+
 }
 
 .sicon {
@@ -1100,17 +1105,17 @@ a:hover {
 }
 
 div.search {
-     position: absolute;
-     right: 0px;
-     top: -65px;
+    /*position: absolute;
+    right: 0px;
+    top: -65px;*/
 }
 
 #content div.menu {
-     height: 60px;
-     position: absolute;
-     top: -29px;
-     width: 940px;
-     z-index: 999999;
+    /*height: 60px;
+    position: absolute;
+    top: -29px;*/
+    width: 100%;
+    z-index: 999999;
 }
 
 #content div.menu ul {
@@ -1283,7 +1288,7 @@ body.page-template-template-slideshow-php #content .background .container {
 }
 
 .splash .default {
-     background: rgba(0, 0, 0, 0) url("../images/madico-office.jpg") no-repeat scroll 0px 0px;
+     background: rgba(0, 0, 0, 0) url("../images/madico-office.jpg") no-repeat scroll center top / cover;
      /*border-radius: 3px;*/
      display: block;
      height: 180px;
@@ -1316,7 +1321,7 @@ body.page-template-template-slideshow-php #content .background .container {
 }
 
 #content div.page {
-     width: 940px;
+    /*width: 940px;*/
 }
 
 .breadcrumbs {
@@ -1639,146 +1644,148 @@ body.page-template-template-slideshow-php #content .background .container {
 }
 
 #columns div.window-films h2 {
-     color: #00457d;
+    color: #00457d;
 }
 
 #columns div.window-films h2 span.updates {
-     background: #00457d none repeat scroll 0% 0%;
+    background: #00457d none repeat scroll 0% 0%;
 }
 
 #columns div.window-films ul li a {
-     color: #00457d;
+    color: #00457d;
 }
 
 #footer {
-     background: #e3e3e3 none repeat scroll 0% 0%;
-     /*background: #f3efe7 url("../images/footer.png") repeat-x scroll 0px bottom;*/
+    background: #e3e3e3 none repeat scroll 0% 0%;
+    /*background: #f3efe7 url("../images/footer.png") repeat-x scroll 0px bottom;*/
 }
 
 #footer .container {
-     margin: 0px auto;
-     overflow: hidden;
-     padding: 15px 50px;
-     width: 940px;
+    /*margin: 0px auto;
+    overflow: hidden;*/
+    padding: 20px;
+    /*width: 940px;*/
 }
 
 #footer .links {
-     float: left;
-     margin: 12px auto 0px;
+    float: left;
+    margin: 12px auto 0px;
 }
 
 #footer .links ul {
-     margin: 0px 0px 10px;
+    margin: 0px 0px 10px;
 }
 
 #footer .links .menu li a, #footer .links .copyright {
-     color: #666666;
-     display: inline;
-     list-style-type: none;
-     text-align: left;
-     text-decoration: none;
+    color: #666666;
+    display: inline;
+    list-style-type: none;
+    text-align: left;
+    text-decoration: none;
 }
 
 #footer .links .menu li a:hover, #footer .links .copyright:hover {
-     color: #666666;
+    color: #666666;
 }
 
 #footer .links .menu li a a, #footer .links .copyright a {
-     margin-left: 10px;
+    margin-left: 10px;
 }
 
 #footer .links .menu li, #footer .links .menu {
-     display: inline;
-     list-style-type: none;
-     margin: 0px;
-     padding: 0px;
+    display: inline;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #footer .links .menu li a, #footer .links .menu a {
-     padding: 4px 8px;
+    padding: 4px 8px;
 }
 
 #footer .links .menu ul > li:first-child a {
-     padding-left: 0px;
+    padding-left: 0px;
 }
 
 #footer .links p {
-     color: #666666;
-     font-size: 12px;
-     line-height: 18px;
-     margin: 0px;
-     text-align: center;
+    color: #666666;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0px;
+    text-align: center;
 }
 
 #footer .links p a {
-     color: #666666;
+    color: #666666;
 }
 
 #footer .icons {
-     float: right;
-     padding: 0px 20px 0px 0px;
+    float: right;
+    padding: 0px 20px 0px 0px;
 }
 
 #footer .icons img {
-     display: block;
+    display: block;
 }
 
 body.home #content div.container {
-     background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
-     margin: 0px auto;
-     padding: 0px;
+    background: rgba(0, 0, 0, 0) none repeat scroll 0% 0%;
+    margin: 0px auto;
+    /*padding: 0px;*/
 }
 
 body.home #content div.splash {
-     /*border-radius: 3px 3px 0px 0px;*/
-     height: 330px;
-     margin: 0px;
+    /*border-radius: 3px 3px 0px 0px;*/
+    height: 330px;
+    margin: 0px;
 }
 
 body.home #content div.splash li {
-     /*border-radius: 3px 3px 0px 0px;*/
+    /*border-radius: 3px 3px 0px 0px;*/
 }
 
 #content div.splash ul {
-     list-style: outside none none;
-     margin: 0px;
-     overflow: hidden;
-     position: relative;
-     width: 940px;
+    list-style: outside none none;
+    margin: 0px;
+    overflow: hidden;
+    position: relative;
+    /*width: 940px;*/
+    width: 100%;
 }
 
 body.home div.splash ul {
-     height: 330px;
+    height: 330px;
 }
 
 body.home #content div.splash ul li {
-     height: 330px;
-     left: 0px;
-     list-style: outside none none;
-     overflow: hidden;
-     position: absolute;
-     top: 0px;
-     width: 940px;
+    height: 330px;
+    left: 0px;
+    list-style: outside none none;
+    overflow: hidden;
+    position: absolute;
+    top: 0px;
+    /*width: 940px;*/
+    width: 100%;
 }
 
 html body.slug-specialty-film div.pillars > a {
-     background: #f3efe7 url("../images/specialty-pillars.png") no-repeat scroll 0% 0%;
+    background: #f3efe7 url("../images/specialty-pillars.png") no-repeat scroll 0% 0%;
 }
 
 html body.slug-specialty-film div.pillars > a.more {
-     display: none;
+    display: none;
 }
 
 html body.slug-window-film div.pillars > a {
-     background: #f3efe7 url("../images/window-pillars.png") no-repeat scroll 0% 0%;
+    background: #f3efe7 url("../images/window-pillars.png") no-repeat scroll 0% 0%;
 }
 
 body.home div.pillars {
-     height: 300px;
-     overflow: hidden;
-     padding: 0px 0px 20px;
-     position: relative;
-     width: 940px;
+    height: 300px;
+    overflow: hidden;
+    padding: 0px 0px 20px;
+    position: relative;
+    width: 940px;
 }
 
 body.home div.pillars > a {
@@ -1796,176 +1803,176 @@ body.home div.pillars > a {
 }
 
 body.home div.pillars .trigger {
-     display: block;
-     height: 300px;
-     position: absolute;
-     width: 220px;
-     z-index: 1000;
+    display: block;
+    height: 300px;
+    position: absolute;
+    width: 220px;
+    z-index: 1000;
 }
 
 body.home div.pillars #trigger-2 {
-     left: 240px;
+    left: 240px;
 }
 
 body.home div.pillars #trigger-3 {
-     left: 480px;
+    left: 480px;
 }
 
 body.home div.pillars #trigger-4 {
-     left: 720px;
+    left: 720px;
 }
 
 body.home div.pillars #n01 {
-     background-position: 0px 0px;
+    background-position: 0px 0px;
 }
 
 body.home div.pillars #n01:hover {
-     background-position: 0px -300px;
+    background-position: 0px -300px;
 }
 
 body.home div.pillars #n02 {
-     background-position: -240px 0px;
+    background-position: -240px 0px;
 }
 
 body.home div.pillars #n02:hover {
-     background-position: -240px -300px;
+    background-position: -240px -300px;
 }
 
 body.home div.pillars #n03 {
-     background-position: -480px 0px;
+    background-position: -480px 0px;
 }
 
 body.home div.pillars #n03:hover {
-     background-position: -480px -300px;
+    background-position: -480px -300px;
 }
 
 body.home div.pillars #n04 {
-     background-position: -720px 0px;
-     margin: 0px;
+    background-position: -720px 0px;
+    margin: 0px;
 }
 
 body.home div.pillars #n04:hover {
-     background-position: -720px -300px;
+    background-position: -720px -300px;
 }
 
 body.slug-window-film div.pillars #n01 {
-     margin-left: 120px;
+    margin-left: 120px;
 }
 
 body.slug-window-film div.pillars #n04 {
-     display: none;
+    display: none;
 }
 
 body.specialty-film, body.slug-specialty-film, body.chinese {
-     /*background: #c6d1b9 none repeat scroll 0% 0%;*/
+    /*background: #c6d1b9 none repeat scroll 0% 0%;*/
 }
 
 body.specialty-film #content, body.slug-specialty-film #content, body.chinese #content {
-     /*background-color: #edf2e5;*/
-     /*background-image: url("../images/content-specialty-film.png") ! important;*/
+    /*background-color: #edf2e5;*/
+    /*background-image: url("../images/content-specialty-film.png") ! important;*/
 }
 
 body.specialty-film #content h2, body.slug-specialty-film #content h2, body.chinese #content h2 {
-     color: #307630;
+    color: #307630;
 }
 
 body.specialty-film #footer, body.slug-specialty-film #footer, body.chinese #footer {
-     /*background-color: #f3efe7;*/
-     /*background-image: url("../images/footer-specialty-film.png");*/
+    /*background-color: #f3efe7;*/
+    /*background-image: url("../images/footer-specialty-film.png");*/
 }
 
 body.specialty-film .sidebar ul li h2, body.slug-specialty-film .sidebar ul li h2, body.chinese .sidebar ul li h2 {
-     background: #2b4e6b none repeat scroll 0% 0%;
+    background: #2b4e6b none repeat scroll 0% 0%;
 }
 
 body.specialty-film .sidebar ul li#text-8 h2, body.slug-specialty-film .sidebar ul li#text-8 h2, body.chinese .sidebar ul li#text-8 h2, body.specialty-film .sidebar ul li#text-8 h2, body.slug-specialty-film .sidebar ul li#text-8 h2, body.chinese .sidebar ul li#text-8 h2 {
-     background: #3e7920 none repeat scroll 0% 0%;
+    background: #3e7920 none repeat scroll 0% 0%;
 }
 
 body.specialty-film .sidebar ul li.feature, body.slug-specialty-film .sidebar ul li.feature, body.chinese .sidebar ul li.feature {
-     background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+    background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
 }
 
 body.specialty-film .sidebar ul li.feature h2, body.slug-specialty-film .sidebar ul li.feature h2, body.chinese .sidebar ul li.feature h2 {
-     color: #2b4e6b;
+    color: #2b4e6b;
 }
 
 body.specialty-film table, body.slug-specialty-film table, body.chinese table {
-     border-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.3);
 }
 
 body.specialty-film table th, body.slug-specialty-film table th, body.chinese table th, body.specialty-film table thead td, body.slug-specialty-film table thead td, body.chinese table thead td, body.specialty-film table thead tr:nth-child(2n-1) td, body.slug-specialty-film table thead tr:nth-child(2n-1) td, body.chinese table thead tr:nth-child(2n-1) td {
-     background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
-     color: #000000;
+    background: rgba(0, 0, 0, 0.1) none repeat scroll 0% 0%;
+    color: #000000;
 }
 
 body.specialty-film table td, body.slug-specialty-film table td, body.chinese table td {
-     background: rgba(255, 255, 255, 0.8) none repeat scroll 0% 0%;
-     border-bottom: 1px solid #cfcfcf;
+    background: rgba(255, 255, 255, 0.8) none repeat scroll 0% 0%;
+    border-bottom: 1px solid #cfcfcf;
 }
 
 body.window-film #content {
-     background-color: #f3efe7;
-     background-image: url("../images/content-window-film.png");
+    background-color: #f3efe7;
+    background-image: url("../images/content-window-film.png");
 }
 
 body.window-film #footer {
-     background-color: #f3efe7;
-     background-image: url("../images/footer-window-film.png");
+    background-color: #f3efe7;
+    background-image: url("../images/footer-window-film.png");
 }
 
 #job-list {
-     margin: 0px 0px 22px;
+    margin: 0px 0px 22px;
 }
 
 #job-list h3 {
-     color: #000000;
-     margin: 0px 0px 15px;
+    color: #000000;
+    margin: 0px 0px 15px;
 }
 
 #job-list ul {
-     list-style: outside none none;
-     margin: 0px;
-     padding: 0px;
+    list-style: outside none none;
+    margin: 0px;
+    padding: 0px;
 }
 
 #job-list ul li {
-     border-bottom: 1px solid #c4cdcd;
-     display: block;
+    border-bottom: 1px solid #c4cdcd;
+    display: block;
 }
 
 #job-list ul li.odd {
-     margin: 0px 0px 0px 20px;
+    margin: 0px 0px 0px 20px;
 }
 
 #job-list ul li a {
-     display: block;
-     font-size: 18px;
-     font-weight: bold;
-     padding: 10px 0px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 0px;
 }
 
 #job-list ul li a:hover {
-     background: rgba(0, 0, 0, 0) url("../images/career-list-bg.jpg") repeat-x scroll 0% 0%;
-     text-decoration: none;
+    background: rgba(0, 0, 0, 0) url("../images/career-list-bg.jpg") repeat-x scroll 0% 0%;
+    text-decoration: none;
 }
 
 #job-list ul li a span {
-     color: #555555;
-     display: block;
-     font-size: 11px;
-     font-weight: normal;
-     text-transform: uppercase;
+    color: #555555;
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 #home-sections {
-     background: #ffffff none repeat scroll 0% 0%;
-     display: block;
+    background: #ffffff none repeat scroll 0% 0%;
+    display: block;
 }
 
 #home-sections h3 {
-     line-height: 1.6em;
-     margin-top: 0px;
+    line-height: 1.6em;
+    margin-top: 0px;
 }
 
 #home-sections .cms h2 {
