@@ -3,12 +3,13 @@
 	<div class="splash span12">
 		<?php include( 'banner.php'); ?>
 	</div>
-
+</div>
+<div class="row-fluid">
 	<?php show_breadcrumb(); ?>
 
-	<div id="NOTcolumns" class="span12">
+	<div class="span12">
 		<div class="row-fluid">
-			<div class="NOTmain NOTclearfix span8">
+			<div class="span8">
 				<?php the_post(); ?>
 				<h1><?php the_title(); ?></h1>
 
@@ -21,9 +22,6 @@
 			</div>
 
 		</div>
-
-
-
 
 	</div><!--// end #columns -->
 

@@ -1,14 +1,15 @@
 <?php get_header(); ?>
 
-	<div class="splash span-12">
+	<div class="splash span12">
 		<?php include( 'banner.php'); ?>
 	</div>
-
+</div>
+<div class="row-fluid">
 	<?php show_breadcrumb(); ?>
 
-	<div id="NOTcolumns" class="span12">
+	<div class="span12">
 		<div class="row-fluid">
-			<div class="NOTmain span8">
+			<div class="span8">
 				<?php the_post(); ?>
 				<h1 class="post-title"><?php the_title(); ?></h1>
 				<ul class="postinfo clearfix">
@@ -25,9 +26,9 @@
 		</div>
 	</div>
 
-</div>
-</div>
-</div>
-</div>
+</div><!--// end #page -->
+</div><!--// end #container -->
+</div><!--// end #background -->
+</div><!--// end #content -->
 
 <?php get_footer(); ?>

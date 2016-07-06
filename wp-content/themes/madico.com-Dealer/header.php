@@ -22,21 +22,20 @@
 	<div class="background-graphic"></div>
 <div class="container"><!--// start #container -->
 
-	<div class="row-fluid">
-		<div class="branding span4">
-			<a href="<?php print get_option("home"); ?>"><?php print get_bloginfo("description"); ?></a>
-		</div>
-		<div class="OMITutility span4 hidden-phone">
-			<div id="lang_flag_sel"><?php language_selector_flags(); ?></div>
+	<div class="row-fluid headline">
+		<div class="branding span8">
+			<a class="hlogo" href="<?php print get_option("home"); ?>"><img src="<?php bloginfo('template_url'); ?>/images/mad-dd-hdr-logo.png"></a>
+			<!--<div class="pipe hidden"><span class="hidden-phone">&nbsp;</span>|<span class="hidden-phone">&nbsp;</span></div>-->
+			<div class="htext">Dealer&nbsp;<br class="visible-phone" />Directory</div>
 		</div>
 		<div class="search span4 hidden-phone">
-			<?php require_once(TEMPLATEPATH . "/searchform.php"); ?>
+			<?php //require_once(TEMPLATEPATH . "/searchform.php"); ?>
 		</div>
 
 	</div>
 
 	<div class="row-fluid">
-		<div class="span12">
+		<div class="span12 hidden-phone">
 			<div class="menu" id="dave">
 				<ul>
 				<?php
@@ -54,6 +53,9 @@
 				?>
 				</ul>
 			</div>
+		</div>
+		<div class="span12 visible-phone">
+			&nbsp;<!--Insert Phone Menu HERE-->
 		</div>
 	</div>
 

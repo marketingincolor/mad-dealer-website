@@ -14,13 +14,6 @@ add_action('init', 'register_custom_posttypes');
 add_filter('wp_list_pages','base_better_lists');
 add_filter('wp_list_categories','base_better_lists');
 
-/**
- *	Crisis management & team bio's
- */
-include_once TEMPLATEPATH . '/inc/MetaBox.php';
-include_once TEMPLATEPATH . '/inc/MediaAccess.php';
-if ( class_exists('SitePress') )
-	include_once TEMPLATEPATH . '/inc/WPMLPersistence.class.php';
 
 /**
  * Enqueue styles
@@ -744,8 +737,14 @@ function base_body_class( $print = true ) {
 	$c[] = $p . 'd' . gmdate( 'd', $t ); // Day
 	$c[] = $p . 'h' . gmdate( 'H', $t ); // Hour
 }*/
+
+
+
+
+
+
 // Multiple Sidebars
-if ( function_exists('register_sidebar') ) {
+/*if ( function_exists('register_sidebar') ) {
 	register_sidebar(array(
 		'name'=>'Specialty Film Pages',
 		'before_widget' => '<li id="%1$s" class="%2$s">',
@@ -781,7 +780,40 @@ if ( function_exists('register_sidebar') ) {
 		'before_title' => '<h2>',
 		'after_title' => '</h2>'
 	));
+}*/
+
+//Initialize and Register sidebars for theme
+function theme_widgets_init() {
+	register_sidebar(array(
+		'name' => 'Primary Sidebar',
+		'id' => 'sidebar-1',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+	));
+	register_sidebar(array(
+		'name' => 'Secondary Sidebar',
+		'id' => 'sidebar-2',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+	));
+	register_sidebar(array(
+		'name' => 'Tertiary Sidebar',
+		'id' => 'sidebar-3',
+		'before_widget' => '<div class="widget">',
+		'after_widget' => '</div>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>'
+	));
 }
+add_action( 'widgets_init', 'theme_widgets_init' );
+
+
+
+
 
 /**
  *	Child page conditional

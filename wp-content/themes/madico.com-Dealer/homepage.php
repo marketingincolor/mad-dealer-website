@@ -15,7 +15,13 @@
 </div><!-- end #content -->
 
 <div id="home-form">
-	<?php echo 'Insert Directory Form Shortcode/PHP in template HERE'; ?>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span-12 directory-selector">
+				<?php echo 'Insert Directory Form Shortcode/PHP in template HERE'; ?>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="content" notid="REMOVEhome-sections">
