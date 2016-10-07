@@ -14,7 +14,7 @@
 get_header('madico');
 ?>
 <!-- content starts here -->
-<div class="contact-us-container">
+<div class="default-container">
     <div class="container">
         <?php
 		// Start the loop.
