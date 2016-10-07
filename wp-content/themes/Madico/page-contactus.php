@@ -31,7 +31,7 @@ if(isset($_POST['save'])){
     $productsFilter = array_filter($products);
     $productResult = implode(', ', $productsFilter);
     $comments = $_POST['Comments'];
-
+    
     $subject = 'Consumer Window Film Inquiry from Madico, Inc.';
 
     $message = "<html><head></head>"
@@ -101,14 +101,14 @@ if(isset($_POST['save'])){
             . "</div>"
             . "</body>"
             . "</html>";
-
+    
     $to = 'windowfilm@madico.com'; //toAddress
     $headers = array('Content-Type: text/html; charset=UTF-8\r\n'); //headers
     $mailSend = wp_mail($to, $subject, $message,$headers);
-    if($mailSend == 1) {
+    if($mailSend == 1) {   
     do_shortcode('[cfdb-save-form-post]'); // storing into the database
     wp_redirect(home_url('/thankyou')); //redirect to thankyou page
-
+    
     } else {
         $failureMessage = 1; // for failure message
     }
@@ -131,7 +131,7 @@ if(isset($_POST['save'])){
         <span style="color:#FF0000;font-size: 19px;padding: 2px 3px 4px 15px;display: inline-block;"><i class="fa fa-times" aria-hidden="true"></i></span>
         <span style="color:#FF0000;font-size: 16px;">Failed to submit your request</span>
         </div>
-        <?php
+        <?php 
         }
         ?>
         <div class="contact-us-form">
@@ -257,11 +257,11 @@ get_footer('madico');
        jQuery('#save').click(function(){
           jQuery('#UserType-error').css({ display: "block" });
        });
-
+       
        jQuery('input:radio').click(function() {
             jQuery('input:radio[name='+jQuery(this).attr('name')+']').parent().removeClass('contact-active');
             jQuery(this).parent().addClass('contact-active');
        });
-
+       
     });
 </script>
