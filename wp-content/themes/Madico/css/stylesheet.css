@@ -1366,10 +1366,10 @@ p.breadcrumb-custom {
 /*Default page ends here*/
 
 /*CF7 Formatting starts here*/
-.dealer-submit-form { margin:0 auto; max-width:90%; }
+.dealer-submit-form { margin:0 auto; max-width:80%; }
 .wpcf7-form {}
 .wpcf7-form input { border: 2px solid #d9d9d9; }
-.wpcf7-form p, .wpcf7-form label { font-size: 14px; font-weight:normal; }
+.wpcf7-form p, .wpcf7-form label { font-size: 18px; font-weight:normal; color:#969696; }
 .wpcf7-form .wpcf7-form-control-wrap {} /*span*/
 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control[type="text"],
 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control[type="email"] {
@@ -1380,8 +1380,21 @@ p.breadcrumb-custom {
     padding: 8px 15px;
     color:#555;
 }
-
 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control input[type="checkbox"] { display: initial; }
-.wpcf7-submit {}
+.wpcf7-file { font-size:14px; font-weight:normal; }
+.wpcf7-submit {
+    background: #093c71;
+    color: #ffffff;
+    overflow: hidden;
+    padding: 10px 25px 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    border:none;
+}
+.wpcf7-submit:hover { color: #fff; background: #356793; }
 .wpcf7-form-control::-moz-placeholder { color: #555 !important; }
 /*CF7 Formatting ends here*/
