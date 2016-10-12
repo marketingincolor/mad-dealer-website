@@ -1367,6 +1367,7 @@ p.breadcrumb-custom {
 
 /*CF7 Formatting starts here*/
 .dealer-submit-form { margin:0 auto; max-width:80%; }
+.wpcf7 { display:inline-block; }
 .wpcf7-form {}
 .wpcf7-form input { border: 2px solid #d9d9d9; box-shadow: none !important; }
 .wpcf7-form p, .wpcf7-form label { font-size: 14px; font-weight:normal; color:#969696; }
