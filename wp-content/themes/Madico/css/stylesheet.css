@@ -1370,7 +1370,7 @@ p.breadcrumb-custom {
 .wpcf7 { display:inline-block; }
 .wpcf7-form {}
 .wpcf7-form input { border: 2px solid #d9d9d9; box-shadow: none !important; }
-.wpcf7-form p, .wpcf7-form label { font-size: 14px; font-weight:normal; color:#969696; }
+.wpcf7-form p, .wpcf7-form label { font-size: 14px; font-weight:normal; color:#767676; }
 .wpcf7-form .wpcf7-form-control-wrap {} /*span*/
 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control[type="text"],
 .wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control[type="email"] {
@@ -1381,7 +1381,8 @@ p.breadcrumb-custom {
     padding: 8px 15px;
     color:#555;
 }
-.wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control input[type="checkbox"] { display: initial; }
+/*.wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control input[type="checkbox"] { display: initial; }*/
+.wpcf7-form input[type="checkbox"], .wpcf7-form input[type="radio"] { display: inline; }
 .wpcf7-form .contact-form-blk { margin-top:20px; }
 .wpcf7-file { font-size:14px; font-weight:normal; }
 .wpcf7-submit {
@@ -1396,6 +1397,7 @@ p.breadcrumb-custom {
     -moz-border-radius: 40px;
     border-radius: 40px;
     border:none;
+    margin-top:10px;
 }
 .wpcf7-submit:hover { color: #fff; background: #356793; }
 .wpcf7-form-control::-moz-placeholder { color: #555 !important; }
