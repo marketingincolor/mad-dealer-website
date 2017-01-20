@@ -71,7 +71,7 @@ get_header('madico');
         </a>
 </p>
 <!-- content ends here -->
-<div class="bottom-slider">
+<div class="bottom-slider"><h3 style="text-align:center; font-weight:bold; margin:0; color:#5F5F5F;">Our Brands</h3>
         <div class="container">
             <div class="slider responsive">
                 <?php
@@ -94,9 +94,10 @@ get_header('madico');
                 if ($slider):
                     foreach ($slider as $post) : setup_postdata($post);
                         $slider_img = get_post_meta($post->ID, 'wpcf-slider-image', false);
+                        $slider_link = get_post_meta($post->ID, 'wpcf-slider-website', true);
                         ?>
                         <div>
-                            <a href="<?php echo $post->ID; ?>" class="" data-toggle="modal" >
+                            <a href="<?php echo $slider_link;//$post->ID; ?>" class="" data-toggle="NOTmodal" target="_blank">
                                 <img src="<?php echo $slider_img[0]; ?>"/>
                             </a>
                         </div>
