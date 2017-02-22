@@ -204,10 +204,10 @@ if(isset($_POST['save'])){
                                         </select>
                                     </li>
                                     <li>
-
-                                        <select name="State" class="state" id="stateId">
+                                        <input type="text" class="form-control" placeholder="State/Province *" name="state" id="state">
+                                        <!--<select name="State" class="state" id="stateId">
                                              <option value="0">State/Province *</option>
-                                        </select>
+                                        </select>-->
                                     </li>
                                     <li>
                                     <input type="text" class="form-control" placeholder="City *" name="city" id="city">
