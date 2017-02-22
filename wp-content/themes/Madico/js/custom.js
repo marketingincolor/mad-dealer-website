@@ -318,7 +318,7 @@ jQuery("#contactusPage").validate({
         });
 
         /* Checking the the states with respect to the countries and dealers | Page:Contact Us */
-    jQuery('select.country').on('change', function() {
+    jQuery('select.countryOMIT').on('change', function() {
     var country = jQuery('#countryId').val();
     var homeURL = jQuery("#siteurl").attr('href');
     var ajaxurl = homeURL+"/wp-admin/admin-ajax.php";
@@ -339,7 +339,7 @@ jQuery("#contactusPage").validate({
 
 
 /* Checking the the cities with respect to the states and dealers | Page:Contact Us*/
- jQuery('select.state').on('change', function() {
+ jQuery('select.stateOMIT').on('change', function() {
     var cities = jQuery('#stateId').val();
 
     var homeURL = jQuery("#siteurl").attr('href');

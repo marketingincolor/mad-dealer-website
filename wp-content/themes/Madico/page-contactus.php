@@ -210,9 +210,10 @@ if(isset($_POST['save'])){
                                         </select>
                                     </li>
                                     <li>
-                                        <select name ="city" id ="city" class="city">
+                                    <input type="text" class="form-control" placeholder="City *" name="city" id="city">
+                                        <!--<select name ="city" id ="city" class="city">
                                             <option value="0">City *</option>
-                                        </select>
+                                        </select>-->
                                     </li>
                                 </ul>
                             </div>
