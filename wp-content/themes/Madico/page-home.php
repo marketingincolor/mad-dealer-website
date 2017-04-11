@@ -111,43 +111,39 @@ get_header('madico');
             </div>
         </div>
     </div>
-    <div class="bottom-slider"><h3 style="text-align:center; font-weight:bold; margin:0; color:#5F5F5F;">Our Brands</h3>
-        <div class="container">
-            <div class="slider responsive">
-                <?php
-                /* To display the slider from the home&result slider section */
-                $slider_list = array(
-                    'posts_per_page' => -1,
-                    'offset' => 0,
-                    'category' => '',
-                    'category_name' => 'home-brandslider',
-                    'orderby' => 'title',
-                    'order' => 'ASC',
-                    'post_type' => 'footerslider',
-                    'post_mime_type' => '',
-                    'post_parent' => '',
-                    'author' => '',
-                    'post_status' => 'publish',
-                    'suppress_filters' => true
-                );
-                $slider = get_posts($slider_list);
-                if ($slider):
-                    foreach ($slider as $post) : setup_postdata($post);
-                        $slider_img = get_post_meta($post->ID, 'wpcf-slider-image', false);
-                        $slider_link = get_post_meta($post->ID, 'wpcf-slider-website', true);
-                        ?>
-                        <div>
-                            <a href="<?php echo $slider_link;//$post->ID; ?>" class="NOTmadico-slider-btn" data-toggle="NOTmodal" target="_blank">
-                                <img src="<?php echo $slider_img[0]; ?>"/>
-                            </a>
-                        </div>
-                        <?php
-                    endforeach;
-                else:
-                    echo '';
-                endif;
-                wp_reset_postdata();
-                ?>
+
+    <div class="bottom-slider">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-mfilm-img.jpg" /></div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="content">
+                        <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-mfilm-logo.png" /></p>
+                        <p>Whether a commercial architect, a homeowner, or an automobile enthusiast, Madico<sup>&reg;</sup> has a product that will greatly improve the glass that surrounds you. Trusted by the Smithsonian, the Louvre, and many other architectural landmarks, Madico has been improving windows with films for more than 40 years.</p>
+                        <p><a href="http://madico.com" target="_blank" class="more-btn">More About Madico Window Films<sup>&reg;</sup></a><br class="hidden-md"><br class="hidden-md"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="hidden-md hidden-lg col-sm-12 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-img.jpg" /></div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="content">
+                        <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-logo.png" /></p>
+                        <p>We live in a far from perfect world. Whether it is man or nature, destructive forces are all around us. Madico is and always has been the pioneer and world leader in the development of window protection systems, like SafetyShield<sup>&reg;</sup>, that guard against everything from criminal acts to catastrophic events.</p>
+                        <p><a href="http://safetyshield.com" target="_blank" class="more-btn">More About SafetyShield<sup>&reg;</sup></a><br class="hidden-md"><br class="hidden-md"></p>
+                    </div>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-img.jpg" /></div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sscape-img.jpg" /></div>
+                <div class="col-sm-12 col-md-6">
+                    <div class="content">
+                        <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-sscape-logo.png" /></p>
+                        <p>Sunscape<sup>&reg;</sup> window films celebrate everything we love about the sun, while creating a safe, energy-efficient environment that captivates as well as it protects. Your family will enjoy cooler summers and warmer winters, along with the benefits of reduced glare and UV exposure, in a superior window film product that lasts for a lifetime.</p>
+                        <p><a href="http://sunscapefilms.com" target="_blank" class="more-btn">More About Sunscape<sup>&reg;</sup></a><br class="hidden-md"><br class="hidden-md"></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
