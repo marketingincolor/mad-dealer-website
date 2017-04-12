@@ -62,6 +62,12 @@ get_header('madico');
                 wp_reset_postdata();
                 ?>
         </div>
+        <div class="txt-blk-container">
+            <div class="txt-blk">
+                <h2 class="hidden-xs hidden-sm">Welcome to the Madico Dealer Directory</h2>
+                <h3>Madico offers a variety of window film products tht improve the glass that surrounds you. Our Dealer Directory is the right place to find the products that interest you and the dealers who sell them.</h3>
+            </div>
+        </div>
         <div class="search-blk-container">
             <div class="search-blk">
                 <div class="searchby">
@@ -133,7 +139,7 @@ get_header('madico');
                         <p><a href="http://safetyshield.com" target="_blank" class="more-btn">More About SafetyShield<sup>&reg;</sup></a><br class="hidden-md"><br class="hidden-md"></p>
                     </div>
                 </div>
-                <div class="hidden-xs hidden-sm col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-img.jpg" /></div>
+                <div class="hidden-xs hidden-sm hidden-md col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-img.jpg" /></div>
             </div>
             <div class="row">
                 <div class="col-sm-12 col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sscape-img.jpg" /></div>
