@@ -126,7 +126,7 @@ get_header('madico');
                     <div class="content">
                         <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-mfilm-logo.png" /></p>
                         <p>Whether a commercial architect, a homeowner, or an automobile enthusiast, Madico<sup>&reg;</sup> has a product that will greatly improve the glass that surrounds you. Trusted by the Smithsonian, the Louvre, and many other architectural landmarks, Madico has been improving windows with films for more than 40 years.</p>
-                        <p><a href="http://madico.com" target="_blank" class="more-btn"><span class="hidden-md hidden-lg">Learn </span>More <span class="hidden-xs hidden-sm">About Madico Window Films<sup>&reg;</sup></span></a><br class="hidden-md"><br class="hidden-md"></p>
+                        <p><a href="http://madico.com" target="_blank" class="more-btn">Learn More</a><br class="hidden-md"><br class="hidden-md"></p>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@ get_header('madico');
                     <div class="content">
                         <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-logo.png" /></p>
                         <p>We live in a far from perfect world. Whether it is man or nature, destructive forces are all around us. Madico is and always has been the pioneer and world leader in the development of window protection systems, like SafetyShield<sup>&reg;</sup>, that guard against everything from criminal acts to catastrophic events.</p>
-                        <p><a href="http://safetyshield.com" target="_blank" class="more-btn"><span class="hidden-md hidden-lg">Learn </span>More <span class="hidden-xs hidden-sm">About SafetyShield<sup>&reg;</sup></span></a><br class="hidden-md"><br class="hidden-md"></p>
+                        <p><a href="http://safetyshield.com" target="_blank" class="more-btn">Learn More</a><br class="hidden-md"><br class="hidden-md"></p>
                     </div>
                 </div>
                 <div class="hidden-xs hidden-sm col-md-6 pad-zero"><img class="img-full" src="<?php echo get_template_directory_uri(); ?>/images/home-sshield-img.jpg" /></div>
@@ -147,7 +147,7 @@ get_header('madico');
                     <div class="content">
                         <p><img class="img-responsive" src="<?php echo get_template_directory_uri(); ?>/images/home-sscape-logo.png" /></p>
                         <p>Sunscape<sup>&reg;</sup> window films celebrate everything we love about the sun, while creating a safe, energy-efficient environment that captivates as well as it protects. Your family will enjoy cooler summers and warmer winters, along with the benefits of reduced glare and UV exposure, in a superior window film product that lasts for a lifetime.</p>
-                        <p><a href="http://sunscapefilms.com" target="_blank" class="more-btn"><span class="hidden-md hidden-lg">Learn </span>More <span class="hidden-xs hidden-sm">About Sunscape<sup>&reg;</sup></span></a><br class="hidden-md"><br class="hidden-md"></p>
+                        <p><a href="http://sunscapefilms.com" target="_blank" class="more-btn">Learn More</a><br class="hidden-md"><br class="hidden-md"></p>
                     </div>
                 </div>
             </div>
