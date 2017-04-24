@@ -269,21 +269,22 @@ h2{
 }
 .img-full { width:100%; }
 .pad-zero { padding:0 !important; }
-.content { margin:2.125em 3.75em 0em 2.75em; font-size:16px; line-height:1.625; }
+.content { margin:0em 2.5em; font-size:16px; line-height:1.625; }
 .more-btn { background-color:#053a6f; text-transform:uppercase; border-radius:50px; padding:10px 20px; margin-top:10px; font-weight:bold; text-align:center; display:inline-block; }
 .more-btn, .more-btn:hover { color:#fff; }
+.vcenter { display: inline-block;  vertical-align: middle; float: none; }
 
 @media (max-width: 767px) {
     .more-btn { font-size:14px; }
 }
 
-.carousel-inner { background-color:#777777; }
+.carousel-inner { background-color:#333333; }
 .carousel-fade .carousel-inner .item {
     opacity: 0;
     transition-property: opacity;
 }
 .carousel-fade .carousel-inner .active {
-    opacity: 1;
+    opacity: 0.5;
 }
 .carousel-fade .carousel-inner .active.left,
 .carousel-fade .carousel-inner .active.right {
@@ -293,7 +294,7 @@ h2{
 }
 .carousel-fade .carousel-inner .next.left,
 .carousel-fade .carousel-inner .prev.right {
-    opacity: 1;
+    opacity: 0.5;
 }
 .carousel-fade .carousel-control {
     z-index: 2;
@@ -371,6 +372,7 @@ h2{
 @media (max-width:640px) {
     .carousel .item { height:950px; }
     .txt-blk-container{ top:-80%; width:95%; }
+    .txt-blk { margin-top:25% !important; }
 }
 
 .txt-blk {
