@@ -1428,6 +1428,9 @@ p.breadcrumb-custom {
 }
 /*.wpcf7-form .wpcf7-form-control-wrap .wpcf7-form-control input[type="checkbox"] { display: initial; }*/
 .wpcf7-form input[type="checkbox"], .wpcf7-form input[type="radio"] { display: inline; }
+@media (max-width: 640px) {
+    .wpcf7-form input[type="checkbox"] { margin-top:2px; }
+}
 .wpcf7-form .contact-form-blk { margin-top:20px; }
 .wpcf7-file { font-size:14px; font-weight:normal; }
 .wpcf7-submit {
