@@ -45,7 +45,7 @@
                         </ul>
                     </div>
                     <div class="footer-bottom">
-                         <p>Copyright © 2016 Madico, Inc.</p>
+                         <p>Copyright © <?php echo date("Y"); ?> Madico, Inc.</p>
                     </div>
                 </div>
             </div>
