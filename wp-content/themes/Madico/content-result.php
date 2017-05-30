@@ -192,10 +192,12 @@
                                         $brand_2 = get_post_meta($post->ID, 'sunscape', true);
                                         $brand_3 = get_post_meta($post->ID, 'safetyshield', true);
                                         $brand_4 = get_post_meta($post->ID, 'sungard', true);
+                                        $brand_5 = get_post_meta($post->ID, 'clearplex', true);
                                         echo ($brand_1[0] == 1 ? '<img src=' . get_template_directory_uri() . '/images/madico-icon.png  width="22" height="21"/> ' : "");
                                         echo ($brand_3[0] == 1 ? '<img src=' . get_template_directory_uri() . '/images/safety-shield-icon.png  width="22" height="21"/> ' : "");
                                         echo ($brand_2[0] == 1 ? '<img src=' . get_template_directory_uri() . '/images/sunscape-icon.png  width="22" height="21"/> ' : "");
                                         echo ($brand_4[0] == 1 ? '<img src=' . get_template_directory_uri() . '/images/sungard-icon.png  width="22" height="21"/> ' : "");
+                                        echo ($brand_5[0] == 1 ? '<img src=' . get_template_directory_uri() . '/images/clearplex-icon.png  width="22" height="21"/> ' : "");
                                         ?>
                                     </div>
                                 </div>

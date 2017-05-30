@@ -607,9 +607,11 @@ function bs_dealer_table_content( $column_name, $post_id ) {
    	$cat_1 = get_post_meta( $post_id, 'automotive', true );
    	$cat_2 = get_post_meta( $post_id, 'architectural', true );
    	$cat_3 = get_post_meta( $post_id, 'safety_and_security', true );
+   	$cat_4 = get_post_meta( $post_id, 'windshield_protection', true );
    	echo ($cat_1[0]==1 ? 'Automotive '.'</br>':'');
    	echo ($cat_2[0]==1 ? 'Architectural '.'</br>':'');
    	echo ($cat_3[0]==1 ? 'Safety and Security':'');
+   	echo ($cat_4[0]==1 ? 'Windshield Protection':'');
    	}
         
     $post_Type=$_GET['post_type']; 

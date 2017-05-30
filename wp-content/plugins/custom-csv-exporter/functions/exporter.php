@@ -62,9 +62,18 @@ function ccsve_generate(){
         foreach($ccsve_generate_value_arr['safety_and_security'] as $safetyValues){
           if(empty($safetyValues)) {
             $safetySecurity['safety_and_security'][] = 0;
-          }else {
+          } else {
             $safetyResult = unserialize($safetyValues);  
             $safetySecurity['safety_and_security'][] = implode(",", $safetyResult);
+          }
+        }
+
+        foreach($ccsve_generate_value_arr['windshield_protection'] as $windshieldValues){
+          if(empty($windshieldValues)) {
+            $windshieldProtection['windshield_protection'][] = 0;
+          } else {
+            $windshieldResult = unserialize($windshieldValues);  
+            $windshieldProtection['windshield_protection'][] = implode(",", $windshieldResult);
           }
         }
         
@@ -100,6 +109,14 @@ function ccsve_generate(){
                 $sunGard['sungard'][] = implode(",", $sungardResult);
             }
         }
+        foreach($ccsve_generate_value_arr['clearplex'] as $clearplexValues){
+            if(empty($clearplexValues)) {
+                $clearPlex['clearplex'][] = 0;
+            } else {
+                $clearplexResult = unserialize($clearplexValues);  
+                $clearPlex['clearplex'][] = implode(",", $clearplexResult);
+            }
+        }
         foreach($ccsve_generate_value_arr['facebook_status'] as $facebookValues){
             if(empty($facebookValues)) {
                 $faceStatus['facebook_status'][] = 0;
@@ -126,7 +143,7 @@ function ccsve_generate(){
         }
         
   
-        $ccsve_generate_value_arr = array_merge($ccsve_generate_value_arr, $autoMototive,$archiTecture,$safetySecurity,$maDico,$sunScape,$safetyShield,$sunGard,$faceStatus,$twiStatys,$linkStatus);
+        $ccsve_generate_value_arr = array_merge($ccsve_generate_value_arr, $autoMototive,$archiTecture,$safetySecurity,$windshieldProtection,$maDico,$sunScape,$safetyShield,$sunGard,$clearPlex,$faceStatus,$twiStatys,$linkStatus);
     
         
         unset($ccsve_generate_value_arr['logo']);

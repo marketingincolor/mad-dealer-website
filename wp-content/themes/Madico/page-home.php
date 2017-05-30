@@ -86,6 +86,7 @@ get_header('madico');
                                     <option value="automotive">Automotive</option>
                                     <option value="architectural">Architectural</option>
                                     <option value="safety_and_security">Safety and Security</option>
+                                    <option value="windshield_protection">Windshield Protection</option>
                             </select>
                         </li>
                         <li class="location">
