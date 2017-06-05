@@ -18,9 +18,9 @@ function ccsve_generate(){
 	$ccsve_generate_query = get_posts(array('post_type' => $ccsve_generate_post_type, 'post_status' => 'publish', 'posts_per_page' => -1));
 	// Count the number of instances of the custom post type
 	$ccsve_count_posts = count($ccsve_generate_query);	
-	
+  $order = array( dealer_id, company_name, automotive, architectural, safety_and_security, windshield_protection, logo, street, city, state, zip, country, phone_number, email, madico, sunscape, clearplex, safetyshield, sungard, website, facebook, facebook_status, twitter, twitter_status, linkedin, linkedin_status);
 	// Build an array of the custom field values
-	$ccsve_generate_value_arr = array();
+	$get_ccsve_generate_value_arr = array();
 	$i = 0; 
 	
 	foreach ($ccsve_generate_query as $post): setup_postdata($post);	
@@ -31,7 +31,7 @@ function ccsve_generate(){
                      // check if each custom field value matches a custom field that is being exported
                       if (array_key_exists($key, $ccsve_generate_post_values)) {
                            // $sampleArray[] = $ccsve_generate_post_values;
-                               $ccsve_generate_value_arr[$key][$i] = $ccsve_generate_post_values[$key]['0'];
+                               $get_ccsve_generate_value_arr[$key][$i] = $ccsve_generate_post_values[$key]['0'];
                             // if the the custom fields match, save them to the array of custom field values
                       }
               }
@@ -39,7 +39,8 @@ function ccsve_generate(){
 	$i++;
 		 
 	endforeach;	
-        
+  $ccsve_generate_value_arr = array_replace(array_flip($order), $get_ccsve_generate_value_arr);
+
         /* To unserialize all the check values to accepted format*/
         foreach($ccsve_generate_value_arr['automotive'] as $automotiveValues){
           if(empty($automotiveValues)){
@@ -145,7 +146,6 @@ function ccsve_generate(){
   
         $ccsve_generate_value_arr = array_merge($ccsve_generate_value_arr, $autoMototive,$archiTecture,$safetySecurity,$windshieldProtection,$maDico,$sunScape,$safetyShield,$sunGard,$clearPlex,$faceStatus,$twiStatys,$linkStatus);
     
-        
         unset($ccsve_generate_value_arr['logo']);
 //        echo '<pre>';
 //        print_r($ccsve_generate_value_arr);
@@ -186,9 +186,9 @@ function ccsve_generate(){
  
     // Put the data from the new multi-dimensional array into the stream
     fputcsv($fh, $data);
-}
+  }
 // Close the file stream
 fclose($fh);
 // Make sure nothing else is sent, our file is done
 exit;
-	}
+}

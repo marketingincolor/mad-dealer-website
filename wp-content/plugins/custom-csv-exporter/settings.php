@@ -68,8 +68,8 @@ if(!class_exists('WP_CCSVE_Settings'))
             // echo a proper input type="text"
             foreach ($items as $item) {
              	$checked = ($options==$item) ? ' checked="checked" ' : '';
-             	echo '<input type="radio" id="post_type"'.$item.' name="ccsve_post_type" value="dealer" '.$checked.'" style="display:none;"/>';
-             	echo '<label for=post_type'.$item.' style="display:none;"> '.$item.'</label>';
+             	echo '<input type="radio" id="post_type'.$item.'" name="ccsve_post_type" value="'.$item.'" '.$checked.' />';
+             	echo '<label for=post_type'.$item.' > '.$item.'</label>';
              	echo ' <br />';
             }
         } // END public function settings_field_input_text($args)
@@ -80,16 +80,16 @@ if(!class_exists('WP_CCSVE_Settings'))
         	$meta_keys = get_post_meta_keys($ccsve_post_type);
             $ccsve_custom_fields =get_option('ccsve_custom_fields');
             $ccsve_meta_keys_num = count($meta_keys);
-            echo '<select multiple="multiple" size="'.$ccsve_meta_keys_num.'" name="ccsve_custom_fields[selectinput][]" style="display:none;">';
-            
+            echo '<select multiple="multiple" size="'.$ccsve_meta_keys_num.'" name="ccsve_custom_fields[selectinput][]" >';
+
             foreach ($meta_keys as $meta_key) {
             	if (in_array($meta_key, $ccsve_custom_fields['selectinput'])){
             	 echo '\n\t<option selected="selected" value="'. $meta_key . '">'.$meta_key.'</option>'; 
             	} else {
             	 echo '\n\t<option selected="selected" value="'. $meta_key . '">'.$meta_key.'</option>'; 
                 }
-        } // END public function settings_field_input_text($args)
-        
+            } // END public function settings_field_input_text($args)
+
         /**
          * add a menu
          */		

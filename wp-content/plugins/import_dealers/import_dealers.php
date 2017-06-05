@@ -99,40 +99,44 @@ $tablename=$wpdb->prefix."posts";
                         $automotive =  explode(',', $line_of_text[2]);
                         $architecture =  explode(',', $line_of_text[3]);
                         $safety_and_security =  explode(',', $line_of_text[4]);
+                        $windshield_protection =  explode(',', $line_of_text[5]);
                         
                         /* converting the dealers brand values into array formats*/
-                        $madico =  explode(',', $line_of_text[12]);
-                        $sunscape =  explode(',', $line_of_text[13]);
-                        $safetyshield =  explode(',', $line_of_text[14]);
-                        $sungard =  explode(',', $line_of_text[15]);
+                        $madico =  explode(',', $line_of_text[13]);
+                        $sunscape =  explode(',', $line_of_text[14]);
+                        $clearplex =  explode(',', $line_of_text[15]);
+                        $safetyshield =  explode(',', $line_of_text[16]);
+                        $sungard =  explode(',', $line_of_text[17]);
                         
                         /* converting the social links values into array formats*/
-                        $facebook_status =  explode(',', $line_of_text[18]);
-                        $twitter_status =  explode(',', $line_of_text[20]);
-                        $linkedin_status =  explode(',', $line_of_text[22]);
+                        $facebook_status =  explode(',', $line_of_text[20]);
+                        $twitter_status =  explode(',', $line_of_text[22]);
+                        $linkedin_status =  explode(',', $line_of_text[24]);
                         
                         update_post_meta($post_id,'dealer_id',$line_of_text[0]);
                         update_post_meta($post_id,'company_name', htmlentities($line_of_text[1], ENT_QUOTES, "ISO-8859-1"));
                         update_post_meta($post_id,'automotive',$automotive);
                         update_post_meta($post_id,'architectural',$architecture);
                         update_post_meta($post_id,'safety_and_security',$safety_and_security);
-                        update_post_meta($post_id,'street',$line_of_text[5]);
-                        update_post_meta($post_id,'city',htmlentities($line_of_text[6],ENT_QUOTES, "ISO-8859-1"));
-                        update_post_meta($post_id,'state',$line_of_text[7]);
-                        update_post_meta($post_id,'zip',$line_of_text[8]);
-                        update_post_meta($post_id,'country',$line_of_text[9]);
-                        update_post_meta($post_id,'phone_number',$line_of_text[10]);
-                        update_post_meta($post_id,'email',$line_of_text[11]);
+                        update_post_meta($post_id,'windshield_protection',$windshield_protection);
+                        update_post_meta($post_id,'street',$line_of_text[6]);
+                        update_post_meta($post_id,'city',htmlentities($line_of_text[7],ENT_QUOTES, "ISO-8859-1"));
+                        update_post_meta($post_id,'state',$line_of_text[8]);
+                        update_post_meta($post_id,'zip',$line_of_text[9]);
+                        update_post_meta($post_id,'country',$line_of_text[10]);
+                        update_post_meta($post_id,'phone_number',$line_of_text[11]);
+                        update_post_meta($post_id,'email',$line_of_text[12]);
                         update_post_meta($post_id,'madico',$madico);
                         update_post_meta($post_id,'sunscape',$sunscape);
+                        update_post_meta($post_id,'clearplex',$clearplex);
                         update_post_meta($post_id,'safetyshield',$safetyshield);
                         update_post_meta($post_id,'sungard',$sungard);
-                        update_post_meta($post_id,'website',$line_of_text[16]);
-                        update_post_meta($post_id,'facebook',$line_of_text[17]);
+                        update_post_meta($post_id,'website',$line_of_text[18]);
+                        update_post_meta($post_id,'facebook',$line_of_text[19]);
                         update_post_meta($post_id,'facebook_status',$facebook_status);
-                        update_post_meta($post_id,'twitter',$line_of_text[19]);
+                        update_post_meta($post_id,'twitter',$line_of_text[21]);
                         update_post_meta($post_id,'twitter_status',$twitter_status);
-                        update_post_meta($post_id,'linkedin',$line_of_text[21]);
+                        update_post_meta($post_id,'linkedin',$line_of_text[23]);
                         update_post_meta($post_id,'linkedin_status',$linkedin_status);
                         update_post_meta($post_id,'_enable_dealer',1);
                         
